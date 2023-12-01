@@ -30,8 +30,8 @@
 *.exe
 *.out
 *.app
-/Task1/x64/Debug
-/Task1/AdventOfCode2023Task1/x64/Debug
+/Task1/x64
+/Task1/AdventOfCode2023Task1/x64
 /.vs
 /Task1/.vs/AdventOfCode2023Task1/FileContentIndex
 /Task1/.vs/AdventOfCode2023Task1/v17
