@@ -71,5 +71,6 @@ int solve(std::vector<std::string>* input) {
             sum += counter;
         }
     }
+    delete input;
     return sum;
 }

@@ -70,5 +70,6 @@ int solve(std::vector<std::string>* input) {
     for (std::string line : *input) {
         sum += checkValue(line);
     }
+    delete input;
     return sum;
 }
