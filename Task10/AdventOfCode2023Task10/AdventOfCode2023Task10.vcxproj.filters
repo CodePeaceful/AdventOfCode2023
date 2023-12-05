@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AdventOfCode2023Task9.cpp">
+    <ClCompile Include="AdventOfCode2023Task10.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RangedMapper.cpp">
@@ -26,16 +26,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="input.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="RangedMapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RangeHolder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

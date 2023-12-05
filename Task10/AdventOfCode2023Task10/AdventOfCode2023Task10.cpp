@@ -32,7 +32,7 @@ std::vector<std::string>* getInput(std::string filePath) {
 }
 
 long long solve(std::vector<std::string>* lines) {
-    int min = 2147483647;
+    long long min = 2147483647;
     std::vector<std::string> seedStrings = split(split(lines->at(0), ':')[1], ' ');
     std::vector<long long> seeds;
     for (std::string seedString : seedStrings) {
@@ -40,13 +40,16 @@ long long solve(std::vector<std::string>* lines) {
     }
     std::array<RangedMapper, 7> maps = buildMaps(lines);
 
-    for (long long seed : seeds) {
-        long long value = seed;
-        for (RangedMapper map : maps) {
-            value = map.map(value);
-        }
-        if (value < min) {
-            min = value;
+    for (int i = 0; i < seeds.size(); i += 2) {
+        std::cout << i << std::endl;
+        for (long long j = 0; j < seeds[i + 1]; j++) {
+            long long value = seeds[i] + j;
+            for (RangedMapper map : maps) {
+                value = map.map(value);
+            }
+            if (value < min) {
+                min = value;
+            }
         }
     }
 
