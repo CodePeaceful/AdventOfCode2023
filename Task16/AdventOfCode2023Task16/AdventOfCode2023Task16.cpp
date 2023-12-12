@@ -45,6 +45,7 @@ long long solve(std::vector<std::string>* lines) {
     auto kv = std::views::keys(nodes);
     std::vector<std::string> keys{ kv.begin(), kv.end() };
     
+    std::vector<std::string> testNodes = endsWith(keys, 'Z');
     std::vector<std::string> workNodes = endsWith(keys, 'A');
     std::vector<std::string> zNodes = endsWith(workNodes, 'Z');
     while (zNodes.size() != workNodes.size())
@@ -61,12 +62,8 @@ long long solve(std::vector<std::string>* lines) {
         }
         sum++;
         zNodes = endsWith(workNodes, 'Z');
-        /*for (auto s : zNodes) {
-            std::cout << s << std::endl;
-        }
-        if (zNodes.size() > 0)
-            std::cout << std::endl;*/
     }
+    
 
     return sum;
 }
